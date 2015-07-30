@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TeamGen">
+<head>
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <meta charset="UTF-8">
+    <title>Team Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+</head>
+<body ng-controller="MainController">
+    <h1 class="title-head">Welcome to the Team Generator! {{test}}</h1>
+
+    <div class="question-1-box">
+        <div class="question-1">
+        <h2 class="questions">Add a Name:</h2>
+            <input type="text" ng-model="newMember">
+            <button class="button-1" ng-click="addMember()">Add</button>
+        </div>
+
+        <div class="display-1">
+        <h2 class="displays">Current Members List:</h2>
+            <ul><li ng-repeat="member in members">{{member}}</li>   </ul>
+        </div>
+    </div>
+
+    <div class = "generate-box">
+        <button class="button-2" ng-click="generateList()">Generate Teams!</button>
+    </div>
+
+    <h1>{{perTeam}}</h1>
+
+<script src="app/controllers/generator.js"></script>
+</body>
+</html>
